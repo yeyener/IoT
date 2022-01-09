@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 public class Program
 {
-    public static async Task Main(string[] args)
+    static async Task Main(string[] args)
     {
         Console.WriteLine("Hello from the Message Processor Console!");
 
@@ -32,11 +32,19 @@ public class Program
 
         Console.ReadLine();
 
-        await processor.UnregisterEventProcessorAsync();
+        try
+        {
+            Console.WriteLine("Event processor unregister started, please wait...");
 
-        Console.ReadLine();
+            await processor.UnregisterEventProcessorAsync();
+        }catch (Exception ex)
+        {
+            Console.WriteLine($"Exception in UnregisterEventProcessorAsync : {ex.Message}");
+        }                
 
         Console.WriteLine("Event processor unregistered, press enter to close the console");
+
+        Console.ReadLine();
     }
 }
 

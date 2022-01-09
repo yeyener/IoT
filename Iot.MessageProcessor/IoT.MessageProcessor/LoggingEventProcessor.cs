@@ -12,14 +12,14 @@ namespace IoT.MessageProcessor
     {
         public Task OpenAsync(PartitionContext context)
         {
-            Console.WriteLine($"LoggingEventProcessor OpenAsync has been called");
+            Console.WriteLine($"LoggingEventProcessor OpenAsync has been called. Partition : {context.PartitionId}");
 
             return Task.CompletedTask;
         }
 
         public Task CloseAsync(PartitionContext context, CloseReason reason)
         {
-            Console.WriteLine($"LoggingEventProcessor CloseAsync has been called");
+            Console.WriteLine($"LoggingEventProcessor CloseAsync has been called. Partition : {context.PartitionId}");
 
             return Task.CompletedTask;
         }
@@ -27,7 +27,7 @@ namespace IoT.MessageProcessor
 
         public Task ProcessErrorAsync(PartitionContext context, Exception error)
         {
-            Console.WriteLine($"LoggingEventProcessor ProcessErrorAsync has been called");
+            Console.WriteLine($"LoggingEventProcessor ProcessErrorAsync has been called. Partition : {context.PartitionId}");
 
             return Task.CompletedTask;
         }
