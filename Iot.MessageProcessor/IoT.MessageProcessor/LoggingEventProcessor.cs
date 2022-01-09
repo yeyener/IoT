@@ -1,5 +1,7 @@
-﻿using Microsoft.Azure.EventHubs;
+﻿using IoT.Common;
+using Microsoft.Azure.EventHubs;
 using Microsoft.Azure.EventHubs.Processor;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,10 +48,24 @@ namespace IoT.MessageProcessor
 
 
                 Console.WriteLine($"Message received on partition {context.PartitionId} device Id : { deviceId} payload : {payload} ");
+
+                var telemetry = JsonConvert.DeserializeObject<Telemetry>(payload);
+
+                if (telemetry != null && telemetry.Status == StatusType.Emergency)
+                {
+                    Console.WriteLine("Emergency!");
+
+                    SendHelp(telemetry.Latitude, telemetry.Longitude);
+                }
             }
             
 
             return context.CheckpointAsync();
+        }
+
+        private void SendHelp(decimal latitude, decimal longitude)
+        {
+            Console.WriteLine($"Sending help to latitude: {latitude} longitude: {longitude}");
         }
     }
 }

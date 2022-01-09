@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IoT.AgentDevice
+namespace IoT.Common
 {
     public class Telemetry
     {
-        public string Message { get; set; }
+        public decimal Latitude { get; set; }
 
-        public int StatusCode { get; set; }
+        public decimal Longitude { get; set; }
+
+        public StatusType Status { get; set; }
     }
 }

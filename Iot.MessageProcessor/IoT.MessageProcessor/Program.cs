@@ -37,7 +37,8 @@ public class Program
             Console.WriteLine("Event processor unregister started, please wait...");
 
             await processor.UnregisterEventProcessorAsync();
-        }catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             Console.WriteLine($"Exception in UnregisterEventProcessorAsync : {ex.Message}");
         }                

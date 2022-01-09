@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.AgentDevice", "IoT.Agen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.MessageProcessor", "Iot.MessageProcessor\IoT.MessageProcessor\IoT.MessageProcessor.csproj", "{2D992345-0856-4665-BFFF-453F7A070C36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoT.Common", "IoT.Common\IoT.Common\IoT.Common.csproj", "{5D64E29A-CC00-4E1A-89B9-4B4FED062834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2D992345-0856-4665-BFFF-453F7A070C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D992345-0856-4665-BFFF-453F7A070C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D992345-0856-4665-BFFF-453F7A070C36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D64E29A-CC00-4E1A-89B9-4B4FED062834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D64E29A-CC00-4E1A-89B9-4B4FED062834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D64E29A-CC00-4E1A-89B9-4B4FED062834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D64E29A-CC00-4E1A-89B9-4B4FED062834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
