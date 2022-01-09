@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration.Json;
 using Newtonsoft.Json;
 using System.Text;
 
-// See https://aka.ms/new-console-template for more information
+
 Console.WriteLine("Hello from agent!");
 
 var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appSettings.json").Build();
